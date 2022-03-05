@@ -32,3 +32,13 @@
 - Using the Gin Framework to make a REST API
 - declaring endpoints
 - performing POST and GET Requests on a Local variable
+
+### 5. Arachne
+
+#### Learnings
+
+- using the fs module to read,write files
+- using Go's Templating to make a blogs site
+- working with http and handlers
+- serving static files
+- closures in go
