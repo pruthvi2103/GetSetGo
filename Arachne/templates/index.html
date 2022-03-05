@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Go Blogs</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="blog-heading">Go Blogs!</h1>
+      <h2 class="blog-heading">Welcome to go blogs</h2>
+      <h4>Blog List:</h4>
+      <ul>
+        {{range .}}
+        <li><a href="/view/{{.}}">{{.}}</a></li>
+        {{end}}
+      </ul>
+      <h4>Add New Blog</h4>
+      <form id="" action="#" method="post" onsubmit="return handleSubmit(this)">
+        <label for="title">Blog Title</label>
+        <input
+          pattern="[a-zA-Z0-9]{3,99}"
+          name="title"
+          type="text"
+          placeholder="Blog Name"
+        />
+        <input type="submit" value="Create"></input>
+      </form>
+    </div>
+    <script>
+      function handleSubmit(formData){
+          const title= formData.title.value
+          console.log(title);
+        location.href=`/edit/${title}`
+        return false
+      }
+    </script>
+  </body>
+</html>
